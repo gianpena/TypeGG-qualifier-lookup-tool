@@ -1,0 +1,5 @@
+.svelte-kit/
+.vscode/
+node_modules/
+Dockerfile
+.dockerignore

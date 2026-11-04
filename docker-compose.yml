@@ -1,0 +1,8 @@
+services:
+  tgg-qualifier-tool:
+    build: .
+    image: tgg-qualifier-tool-image
+    container_name: tgg-qualifier-tool
+    ports:
+      - "${PORT:-3000}:3000"
+    restart: unless-stopped
