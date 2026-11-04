@@ -115,7 +115,7 @@
             {#if quotes.length > 0}
                 <table class="w-full border-collapse border border-gray-500 table-fixed">
                     <caption>
-                        Clicking on some of the column headers will allow you to use them as sorting
+                        Clicking on some of the column headers will allow you to use them as sorting criteria.
                     </caption>
                     <thead>
                         <tr>
