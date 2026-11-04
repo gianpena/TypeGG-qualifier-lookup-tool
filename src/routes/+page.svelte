@@ -3,7 +3,6 @@
     const border_styling = "rounded-md border-solid border-2 border-gray-500";
     import type { Quote, SortableField } from "#lib/utils.ts";
     import { QUALIFIERS_QUOTE_IDS } from "#lib/utils.ts";
-    import { untrack } from "svelte";
 
     let username: HTMLInputElement;
     let enteredUsername: string = $state("");
@@ -107,13 +106,13 @@
             <input class="p-2 border-gray-400 border-solid border-1 focus:outline-none" bind:this={username}>
         </div>
     </div>
-    <div class="mx-[10%] mt-[20px] flex-1 overflow-y-auto overflow-x-hidden min-h-0">
+    <div class="mx-auto mt-[20px] flex-1 overflow-y-auto min-h-0 w-fit">
         {#await sortedQuotesPromise}
             Loading quotes...
         {:then quotes}
 
             {#if quotes.length > 0}
-                <table class="w-full border-collapse border border-gray-500 table-fixed">
+                <table class="border-collapse border border-gray-500">
                     <caption>
                         Clicking on some of the column headers will allow you to use them as sorting criteria.
                     </caption>
