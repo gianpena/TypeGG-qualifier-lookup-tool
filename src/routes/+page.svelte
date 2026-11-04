@@ -76,7 +76,9 @@
 {#snippet quoteRow(quote: Quote, index: number)}
     <tr>
         <td class="border border-gray-500 p-3 text-center">{index+1}</td>
-        <td class="border border-gray-500 p-3 break-all">{quote.id}</td>
+        <td class="border border-gray-500 p-3 break-all">
+            <a href="https://typegg.io/solo/{quote.id}" class="text-blue-600 hover:text-blue-800 underline">{quote.id}</a>
+        </td>
         <td class="border border-gray-500 p-3 text-center">{quote.length}</td>
         <td class="border border-gray-500 p-3 text-center">{quote.difficulty.toFixed(2)}</td>
         <td class="border border-gray-500 p-3 text-center">{quote.pp} ({quote.wpm})</td>
