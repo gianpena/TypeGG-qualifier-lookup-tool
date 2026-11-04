@@ -4,5 +4,5 @@ services:
     image: tgg-qualifier-tool-image
     container_name: tgg-qualifier-tool
     ports:
-      - "${PORT:-3000}:3000"
+      - "${PORT:-5173}:5173"
     restart: unless-stopped
