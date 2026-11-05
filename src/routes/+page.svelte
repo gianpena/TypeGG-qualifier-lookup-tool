@@ -108,7 +108,9 @@
     </div>
     <div class="mx-auto mt-[20px] flex-1 overflow-y-auto min-h-0 w-fit">
         {#await sortedQuotesPromise}
-            Loading quotes...
+            {#if enteredUsername.length !== 0}
+                Loading quotes...
+            {/if}
         {:then quotes}
 
             {#if quotes.length > 0}
