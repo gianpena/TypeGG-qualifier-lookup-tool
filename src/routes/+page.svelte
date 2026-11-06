@@ -9,7 +9,7 @@
 
     let sortingCriteria: string = $state("Length");
     let sortingDirection: number = $state(0);
-    const directionMapping = ["", "ASC", "DESC"];
+    const directionMapping = ["", "↗︎", "↘︎"];
 
     let quotesPromise: Promise<Quote[]> = $derived.by(async () => {
         if(enteredUsername.length === 0) return [];
@@ -95,7 +95,7 @@
             sortingCriteria = criteria;
             sortingDirection = (sortingDirection+1)%3;
         });
-    }}>{criteria}{sortingCriteria === criteria && sortingDirection !== 0 ? ` (${directionMapping[sortingDirection]})` : null}</th>
+    }}>{criteria}{sortingCriteria === criteria && sortingDirection !== 0 ? ` ${directionMapping[sortingDirection]}` : null}</th>
 {/snippet}
 
 
