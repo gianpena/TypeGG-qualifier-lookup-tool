@@ -86,7 +86,7 @@
 {/snippet}
 
 {#snippet tableHeader(criteria: string)}
-    <th class="hover:bg-zinc-600 border border-gray-500 p-3 w-[12%]" scope="col" {@attach (elem) => {
+    <th class="hover:bg-zinc-400 border border-gray-500 p-3 w-[12%] select-none" scope="col" {@attach (elem) => {
         elem.addEventListener("click", () => {
             if(criteria !== sortingCriteria) {
                 sortingDirection = 0;
